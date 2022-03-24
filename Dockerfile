@@ -15,4 +15,4 @@ COPY broker.ts /activemq/conf/broker.ts
 
 WORKDIR /activemq
 ENTRYPOINT [ "./bin/activemq" ]
-CMD [ "console", "xbean:file:/activemq/conf/myconf.xml", "-Djavax.net.ssl.keyStore=broker.ks -Djavax.net.ssl.keyStorePassword=testtest -Djavax.net.ssl.trustStore=broker.ts -Djavax.net.ssl.trustStorePassword=testtest"]
+CMD [ "console", "xbean:file:/activemq/conf/myconf.xml"]
