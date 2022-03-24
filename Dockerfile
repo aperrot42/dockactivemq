@@ -13,8 +13,6 @@ COPY activemq.conf.xml /activemq/conf/myconf.xml
 COPY broker.ks /activemq/conf/broker.ks
 COPY broker.ts /activemq/conf/broker.ts
 
-# ENV ACTIVEMQ_SSL_OPTS="-Djavax.net.ssl.keyStore=broker.ks -Djavax.net.ssl.keyStorePassword=testtest -Djavax.net.ssl.trustStore=broker.ts -Djavax.net.ssl.trustStorePassword=testtest"
 WORKDIR /activemq
-#RUN javac Main.java
 ENTRYPOINT [ "./bin/activemq" ]
 CMD [ "console", "xbean:file:/activemq/conf/myconf.xml", "-Djavax.net.ssl.keyStore=broker.ks -Djavax.net.ssl.keyStorePassword=testtest -Djavax.net.ssl.trustStore=broker.ts -Djavax.net.ssl.trustStorePassword=testtest"]

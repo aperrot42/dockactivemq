@@ -6,10 +6,13 @@ It allows to create an activeMq broker with self generated ssl certificates.
 
 # usage
 
+Custmize your activemq configuration file : `activemq.conf/xml`
+
+You need to set ssl configuration lines 114-119 : do not forget to use the keystore and trustore password you used while creating self signed certificates.
+
 ```
 ./scripts.build.sh
 ```
-
 
 # resources
 
