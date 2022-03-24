@@ -102,7 +102,7 @@
         -->
         <transportConnectors>
             <!-- AMQPS (AMQP over TLS) -->
-            <transportConnector name="amqp+ssl" uri="amqp+ssl://0.0.0.0:5671"/>
+            <transportConnector name="amqp+ssl" uri="amqp+ssl://0.0.0.0:5671?trace=true&needClientAuth=true"/>
 
             <!-- AMQPS (AMQP over TLS) with enforced certif check -->
             <!-- <transportConnector name="ssl" uri="ssl://0.0.0.0:61617?trace=true&needClientAuth=true" /> -->
